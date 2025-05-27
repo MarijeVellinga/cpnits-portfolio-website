@@ -1,0 +1,203 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main{
+    flex: 1;
+    padding: 0 20px;
+}
+
+/* Navigatiebalk */
+.topnav {
+    display: flex;
+    justify-content: right;
+    top: 0;
+    background-color:darkolivegreen;
+    padding: 1em;
+    color: white;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.auto-margin {
+    margin: auto;
+}
+
+.homepage-link {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 25px;
+    align-self: center;
+}
+
+.topnav-a, 
+.topnav-a:visited, 
+.topnav-a:hover,
+.topnav-a:active,
+.topnav-a:focus {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+
+/* Footer */
+footer {
+    color: white;
+    background-color:darkolivegreen;
+    padding: 1em;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Tekstopmaak */
+h1 {color: darkgreen}
+h2 {color: darkolivegreen}
+h3 {color: rgb(45, 66, 12)}
+
+
+
+/* Flex & Grid containers */
+/* .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+} */
+
+.grid-container {
+    flex: 1;
+    display: grid;
+    max-width: 100%;
+    max-height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-content: center;
+    gap: 50px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+/* Flex & Grid items */
+/* .flex-item {
+    background-color: #04AA6D;
+    padding: 20px;
+    width: 250px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 5px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    color: white;
+    font-size: 30px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+    overflow: hidden;
+
+} */
+
+.grid-item {
+    background-color: darkolivegreen;
+    padding: 10px;
+    width:auto;
+    max-width: auto;
+    height: 250px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: 150px auto auto;
+
+}
+
+.flex-item:hover, .grid-item:hover {
+    transform: scale(1.05);
+}
+
+.flex-item img, .grid-item img {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    object-fit: contain;
+    display: block;
+}
+
+
+
+/* Project titel + link */
+.project-title {
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.project-title a:link,
+.project-title a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.project-title a:hover {
+    color: lightcoral;
+}
+
+.project-title a:active {
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.beschrijving_project {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    margin-top: 1px;
+}
+
+/* Contactformulier in contact.html */
+.ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.li{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0;
+}
+
+input[type=text],
+input[type=email] {
+    border-color: 1px solid blue;
+    border-radius: 6px;
+    padding: 6px;
+    margin: 4px 2px;
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type="reset"]:hover{
+background-color: red;
+}

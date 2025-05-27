@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Portfolio Marije Vellinga{% endblock %}</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+<body>
+    <header class="topnav">
+        <a class="homepage-link" href="{{url_for('main')}}">Portfolio Marije Vellinga</a>
+        <div class="auto-margin"></div>
+        <a class="topnav-a" href="{{url_for ('myprojects')}}">Projects</a>
+        <a class="topnav-a" href="{{url_for('aboutme')}}">About</a>
+        <a class="topnav-a" href="{{url_for('contact')}}">Contact</a>
+        <a class="topnav-a" href="{{url_for ('week3')}}">Week3</a>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Marije Vellinga&trade;</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}Week3{% endblock %}
+
+{% block content %}
+
+<div>
+    <h1> Week 3 webpage &amp; html entities</h1>
+    <p> Page still to be determined, just to make the exercises of week 3.</p>
+    <p>But first, I'll say: "Welcome to my website!".
+    At some point this will turn into a more &lt;serious&gt; webpage. Right now I'm just experimenting with css and html.</p>
+    <p>Like putting multiple &nbsp;&nbsp;spaces &nbsp;&nbsp;between words.
+    Or telling you that I think &euro;2,50 for one ice cream is too expensive.</p>
+</div>
+
+<div>
+<h3>Mijn portfolio</h3>
+<div class="grid-container">
+    <div class="grid-item" id="grid-item-1">
+        <a href="#"><img src="{{url_for('static', filename='images/project_1.png')}}" alt="Project {{i}}"></a>
+        <h4 class="project-title"><a href="#">Project 1</a></h4>
+        <p class="beschrijving_project">Dit is een beschrijving van project 1.</p>
+    </div>
+        <div class="grid-item" id="grid-item-2">
+        <a href="#"><img src="{{url_for('static', filename='images/project_2.png')}}" alt="Project {{i}}"></a>
+        <h4 class="project-title"><a href="#">Project 2</a></h4>
+        <p class="beschrijving_project">Dit is een beschrijving van project 2.</p>
+    </div>
+        <div class="grid-item" id="grid-item-3">
+        <a href="#"><img src="{{url_for('static', filename='images/project_3.png')}}" alt="Project {{i}}"></a>
+        <h4 class="project-title"><a href="#">Project 3</a></h4>
+        <p class="beschrijving_project">Dit is een beschrijving van project 3.</p>
+    </div>
+        <div class="grid-item" id="grid-item-4">
+        <a href="#"><img src="{{url_for('static', filename='images/project_4.png')}}" alt="Project {{i}}"></a>
+        <h4 class="project-title"><a href="#">Project 4</a></h4>
+        <p class="beschrijving_project">Dit is een beschrijving van project 4.</p>
+    </div>
+        <div class="grid-item" id="grid-item-5">
+        <a href="#"><img src="{{url_for('static', filename='images/project_5.png')}}" alt="Project {{i}}"></a>
+        <h4 class="project-title"><a href="#">Project 5</a></h4>
+        <p class="beschrijving_project">Dit is een beschrijving van  project 5.</p>
+    </div>
+</div>
+
+
+<!-- <div>
+<h3>Flexbox Gallery</h3>
+<div class="flex-container">
+    {% for i in range(1, 6) %}
+    <div class="flex-item">
+        <a href="#">
+            <picture>
+                <img src="{{url_for('static', filename='images/project_' ~i~ '.png')}}" alt="Project {{i}}">
+            </picture>
+        </a>
+        <a href="#"><h4 class="project-title">Project {{i}}</h4></a>
+        <p class="beschrijving_project">Dit is een beschrijving van project {{i}}.</p>
+    </div>
+    {% endfor %}
+</div> -->
+
+
+
+{% endblock %}

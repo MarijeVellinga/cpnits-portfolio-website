@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+    <h1>Get in touch with me</h1>
+    <form name="contact" action="./send.html" method="POST">
+        <ul>
+            <li>
+                <label for="firstname">First name</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Your first name please">
+            </li>
+            <li>
+                <label for="lastname">Last name</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Your last name please">
+            </li>
+            <li>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="your e-mail address please" required>
+            </li>
+            <li>
+                <label for="type">Type of message</label>
+                <select name="type">
+                    <option>Complaint</option>
+                    <option selected>Suggestion</option>
+                    <option>Question</option>
+                    <option>Compliment</option>
+                    <option>Other</option>
+                </select>
+            </li>
+            <li>
+                <label for="message">Message</label>
+                <input type="text" id="message" name="message" placeholder="Your message please">
+            </li>
+        </ul>
+
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Nevermind">
+        </div>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('form').addEventListener('submit', function (event) {
+                alert('Thank you for contacting me, ' + document.querySelector('#firstname').value);
+                event.preventDefalit();
+            });
+        });
+    </script>
+
+{% endblock %}

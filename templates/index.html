@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Week3{% endblock %}
+
+{% block content %}
+
+
+        <div>
+            <h1> Marije Vellinga Portfolio </h1>
+            <h2 class="Welcome"> Welcome to My Portfolio</h2>
+            <p id="intro">Hello! My name is Marije Vellinga. I'm a writer of fictional short stories who also has a passion for writing opinionated pieces when given the change. I live in Friesland, The Netherlands where I've lived my whole life. This portfolio is to showcase some of my favourite projects and skills. Feel free to explore and don't hesitate to contact me for any further questions! </p>
+        </div>
+
+        <div>
+            <h2 class="About">About Me</h2>
+            <p id="about-me"> I'm a 22 year old Communication Student at NHL Stenden in Leeuwarden, Friesland. To widen my skillset, I'm following a minor in python programming with additions of html, css and javascript. I have a deep interest in the making and styling of websites and I wish to explore this world more when I've finished my studies. </p>
+            <img src="{{url_for ('static', filename='images/IMG_6467.JPG')}}" alt="Professional picture of Marije" width="200"> 
+            <p><a href="{{url_for('aboutme')}}">Learn more about me</a></p>
+        </div>
+
+        <div>
+            <h2> My Projects </h2>
+            <p id="skills"> During my studies at NHL Stenden I discovered that I am strong in theory and that I am good at translating this into practice.
+                I excel in writing all kinds of texts and I would like to learn more about how to create catchy concepts and resources for different target groups (also with images).
+                I am a team player who works hard to achieve good results, but a pleasant working atmosphere with room for humor is just as important to me. </p>
+            <img src="{{url_for ('static', filename='images/IMG_4001.jpg')}}" alt="Certificate of being a short story writer" width="200">
+            <p><a href="{{url_for ('myprojects')}}">Explore my projects</a></p>
+        </div>
+        
+        <div>
+            <h2 class="Contact"> Contact Me </h2>
+            <p id="contact"> If you have any further questions about my skillset or expertise, or if you simply would like to have a chat with a cup of tea, feel free to contact me via the form below! </p>
+            <img src="{{url_for ('static', filename='images/PngItem_1568354.png')}}" alt="Image of 'contact me' sign" width="200">
+            <p><a href="{{url_for('contact')}}">Get in touch</a></p>
+        </div>
+        
+        <div>
+            <h2 class="week3"> To be determined</h2>
+            <p id="week3"> This page is still to be determined and is now purely used to do the exercises of week 3</p>
+            <p><a href="{{url_for ('week3')}}">Link to be determined</a></p>
+        </div>
+
+{% endblock %}

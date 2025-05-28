@@ -14,23 +14,30 @@
     <div class="topnav">
         <a class="homepage-link" href="{{url_for('main')}}">Portfolio Marije Vellinga</a>
 
-    <div class="auto-margin"></div>
+        <div class="auto-margin"></div>
 
-    <!-- Navigation Links (hidden by default) -->
-        <div id="myLinks">
+        <!-- Navigation Links (hidden by default) -->
+        <div class="desktop-links">
+            <a class="flex-item" href="{{url_for ('myprojects')}}">Projects</a>
+            <a class="flex-item" href="{{url_for('aboutme')}}">About</a>
+            <a class="flex-item" href="{{url_for('contact')}}">Contact</a>
+            <a class="flex-item" href="{{url_for ('week3')}}">Week3</a>
+        </div>
+
+        <!-- Hamburger menu -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="mobile-nav">
+        <div class="flex-vertical">
             <a href="{{url_for ('myprojects')}}">Projects</a>
             <a href="{{url_for('aboutme')}}">About</a>
             <a href="{{url_for('contact')}}">Contact</a>
             <a href="{{url_for ('week3')}}">Week3</a>
-        </div> 
-
-    <!-- Hamburger menu -->
-     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-     </a>
+        </div>
     </div>
-
-
 
     <main>
         {% block content %}{% endblock %}

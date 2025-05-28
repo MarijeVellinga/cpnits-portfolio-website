@@ -34,46 +34,87 @@ main {
 }
 
 
-
 .topnav #myLinks {
     display: none;
 }
 
+.topnav #myLinks a {
+    text-align: right;
+    color: black;
+}
+
+.topnav #myLinks a:hover {
+    color: blue;
+}
+
 .topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
 }
 
 .topnav a.icon {
-  background: darkolivegreen;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .topnav a:hover {
-  color: black;
+    color: palevioletred;
 }
 
 .active {
-  color: white;
+    color: white;
 }
 
+.desktop-links {
+    display: block;
+}
 
+.mobile-nav {
+    margin-top: 48px;
+    height: 400px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: none;
+    padding-top: 48px;
+}
+
+.mobile-nav a {
+    font-size: 36px;
+}
+
+.flex-vertical{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
 
 @media screen and (max-width: 650px) {
-    .topnav-a{
+    .desktop-links {
         display: none;
     }
 
-    .hamburger {
+    .topnav a.icon {
         display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .mobile-nav {
+        margin-top: 48px;
+        position: absolute;
+        display: none;
     }
 }
+
+
 
 /* Footer */
 footer {

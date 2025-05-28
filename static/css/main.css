@@ -14,45 +14,56 @@ body {
 main {
     flex: 1;
     padding: 0 20px;
+    margin-top: 48px;
 }
 
 /* Navigatiebalk */
 .topnav {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
     background-color: darkolivegreen;
-    color: white;
-    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.auto-margin {
-    margin: auto;
+.mobile-nav {
+    position: fixed;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: auto;
+    background-color: rgb(85, 107, 47, 0.99);
+    display: none;
+    padding-bottom: 30px;
 }
+
+.auto-margin {margin: auto;}
 
 .homepage-link {
     text-decoration: none;
     align-self: center;
+    padding: 14px 16px;
+    font-size: 17px;
 }
 
-
-.topnav #myLinks {
-    display: none;
-}
-
-.topnav #myLinks a {
-    text-align: right;
-    color: black;
-}
-
-.topnav #myLinks a:hover {
-    color: blue;
+.mobile-nav a {
+    color: white;
+    padding-top: 10px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
 .topnav a {
     color: white;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
     display: block;
+    font-size: 17px;
 }
 
 .topnav a.icon {
@@ -62,37 +73,15 @@ main {
     top: 0;
 }
 
-.topnav a:hover {
-    color: palevioletred;
-}
+.topnav a:hover {color: palevioletred;}
 
-.active {
-    color: white;
-}
-
-.desktop-links {
-    display: block;
-}
-
-.mobile-nav {
-    margin-top: 48px;
-    height: 400px;
-    width: 100%;
-    background-color: white;
-    position: absolute;
-    display: none;
-    padding-top: 48px;
-}
-
-.mobile-nav a {
-    font-size: 36px;
-}
+.active {color: white;}
 
 .flex-vertical{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 20px;
 }
 
 @media screen and (max-width: 650px) {
@@ -106,12 +95,23 @@ main {
         right: 0;
         top: 0;
     }
+}
 
-    .mobile-nav {
-        margin-top: 48px;
-        position: absolute;
-        display: none;
+@media screen and (min-width: 650px) {
+    .desktop-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 16px;
     }
+    
+    .desktop-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    padding: 14px 16px;
+}
 }
 
 

@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Portfolio Marije Vellinga{% endblock %}</title>
-        <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}" type="text/css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Portfolio Marije Vellinga{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <body>
-    <header class="topnav">
+    <!-- Top navigatie menu -->
+    <div class="topnav">
         <a class="homepage-link" href="{{url_for('main')}}">Portfolio Marije Vellinga</a>
-        <div class="auto-margin"></div>
-        <a class="topnav-a" href="{{url_for ('myprojects')}}">Projects</a>
-        <a class="topnav-a" href="{{url_for('aboutme')}}">About</a>
-        <a class="topnav-a" href="{{url_for('contact')}}">Contact</a>
-        <a class="topnav-a" href="{{url_for ('week3')}}">Week3</a>
-    </header>
+
+    <div class="auto-margin"></div>
+
+    <!-- Navigation Links (hidden by default) -->
+        <div id="myLinks">
+            <a href="{{url_for ('myprojects')}}">Projects</a>
+            <a href="{{url_for('aboutme')}}">About</a>
+            <a href="{{url_for('contact')}}">Contact</a>
+            <a href="{{url_for ('week3')}}">Week3</a>
+        </div> 
+
+    <!-- Hamburger menu -->
+     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+     </a>
+    </div>
+
+
 
     <main>
         {% block content %}{% endblock %}
@@ -24,5 +39,8 @@
     <footer>
         <p>&copy; 2025 Marije Vellinga&trade;</p>
     </footer>
+
+    <script src="{{url_for('static', filename='js/hamburger.js')}}"></script>
 </body>
+
 </html>

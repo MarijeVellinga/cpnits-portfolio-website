@@ -37,7 +37,7 @@ main {
     width: 100%;
     z-index: 1000;
     height: auto;
-    background-color: rgb(85, 107, 47, 0.99);
+    background-color: #556b2ffc;
     display: none;
     padding-bottom: 30px;
 }
